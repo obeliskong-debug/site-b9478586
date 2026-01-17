@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popescu Marian - Avocat de drept penal | Experiență și dedicare în serviciul justiției</title>
+    <meta name="description" content="Avocat de drept penal cu peste 15 ani experiență. Marian Popescu oferă reprezentare legală profesională pentru toate cazurile de drept penal. Contactați pentru consultație.">
+    
+    <style>
+        :root {
+            --primary-navy: #1e3a5f;
+            --primary-gold: #c9a961;
+            --warm-white: #fefefe;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --dark-text: #2c3e50;
+            --warm-beige: #f5f2e9;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: var(--warm-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--warm-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-navy);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(30, 58, 95, 0.3), rgba(30, 58, 95, 0.3)), url('https://source.unsplash.com/1200x800/?birou%20de%20avocatur%C4%83%20modern%20%C8%99i%20profesional');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: var(--warm-white);
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            background-color: var(--primary-gold);
+            color: var(--dark-text);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+        }
+
+        .cta-button:hover {
+            background-color: #b8985a;
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-alt {
+            background-color: var(--warm-beige);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: var(--medium-gray);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .about-text p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .achievements {
+            list-style: none;
+        }
+
+        .achievements li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .achievements li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-gold);
+            font-weight: bold;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--warm-white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-card h3 {
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Process Section */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-navy);
+            color: var(--warm-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .process-step h3 {
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-image: linear-gradient(rgba(30, 58, 95, 0.8), rgba(30, 58, 95, 0.8)), url('https://source.unsplash.com/1200x800/?atmosfer%C4%83%20profesional%C4%83%20%C8%99i%20de%20%C3%AEncredere%20pentru%20call-to-action');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--warm-white);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: var(--warm-white);
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            background-color: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item strong {
+            min-width: 100px;
+            color: var(--primary-navy);
+        }
+
+        .additional-info {
+            list-style: none;
+        }
+
+        .additional-info li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .additional-info li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-gold);
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-navy);
+            color: var(--warm-white);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Scroll offset for fixed header */
+        section {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">Popescu Marian</div>
+                    <ul class="nav-links">
+                        <li><a href="#hero">Acasă</a></li>
+                        <li><a href="#about">Despre mine</a></li>
+                        <li><a href="#services">Servicii</a></li>
+                        <li><a href="#process">Proces</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Avocat de drept penal cu peste 15 ani experiență</h1>
+                    <p>Marian Popescu oferă reprezentare legală profesională și dedicată pentru toate cazurile de drept penal. Experiența și dedicarea mea vă garantează cea mai bună apărare juridică.</p>
+                    <a href="#contact" class="cta-button">Programează consultație</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section-alt">
+            <div class="container">
+                <div class="about-content fade-in">
+                    <div class="about-text">
+                        <h2>Experiență și dedicare în serviciul justiției</h2>
+                        <p>Cu peste 15 ani de experiență în dreptul penal, am reprezentat cu succes sute de clienți în cazuri complexe. Abordarea mea se bazează pe pregătire minuțioasă, analiză detaliată a cazului și strategie juridică personalizată pentru fiecare client.</p>
+                        <ul class="achievements">
+                            <li>Peste 15 ani de experiență în dreptul penal</li>
+                            <li>Sute de cazuri rezolvate cu succes</li>
+                            <li>Specializare în toate aspectele dreptului penal</li>
+                            <li>Abordare personalizată pentru fiecare client</li>
+                            <li>Disponibilitate permanentă pentru urgențe</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://source.unsplash.com/1200x800/?simboluri%20ale%20justi%C8%9Biei%20%C8%99i%20profesionalismului%20juridic" alt="Simboluri ale justiției și profesionalismului juridic" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>Servicii juridice specializate</h2>
+                <p class="section-description">Ofer asistență juridică completă în toate domeniile dreptului penal, de la consultații inițiale până la reprezentarea în instanță.</p>
+                <div class="services-grid fade-in">
+                    <div class="service-card">
+                        <h3>Consultații juridice</h3>
+                        <p>Analiză detaliată a cazului și consiliere juridică profesională pentru toate aspectele dreptului penal.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Reprezentare în instanță</h3>
+                        <p>Apărare profesională în toate instanțele judecătorești, de la judecătoriile locale până la Curtea de Apel.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Asistență în ancheta penală</h3>
+                        <p>Reprezentare și consiliere în timpul anchetei penale, protejarea drepturilor clientului în fața organelor de urmărire penală.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Redactare acte juridice</h3>
+                        <p>Întocmire plângeri penale, cereri, apeluri și alte acte procedurale necesare în procesul penal.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Asistență pentru persoane vătămate</h3>
+                        <p>Reprezentarea părții civile și recuperarea prejudiciilor suferite în urma infracțiunilor.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Urgențe juridice 24/7</h3>
+                        <p>Disponibilitate permanentă pentru situații urgente care necesită intervenție juridică imediată.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="section-alt">
+            <div class="container">
+                <h2>Cum lucrez pentru dumneavoastră</h2>
+                <p class="section-description">Procesul meu de lucru este structurat pentru a vă oferi cea mai bună reprezentare juridică.</p>
+                <div class="process-steps fade-in">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Consultația inițială</h3>
+                        <p>Analizez cazul dumneavoastră în detaliu și vă explic opțiunile juridice disponibile.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Strategia juridică</h3>
+                        <p>Dezvolt o strategie personalizată bazată pe specificul cazului și obiectivele dumneavoastră.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Implementarea strategiei</h3>
+                        <p>Execut strategia juridică cu profesionalism și dedicare, ținându-vă informat în permanență.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Rezultatul final</h3>
+                        <p>Obțin cel mai bun rezultat posibil pentru cazul dumneavoastră prin experiență și pregătire temeinică.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="cta-section">
+            <div class="container">
+                <div class="fade-in">
+                    <h2>Aveți nevoie de asistență juridică?</h2>
+                    <p class="section-description">Nu lăsați problemele juridice să se agraveze. Contactați-mă pentru o consultație și să discutăm cum vă pot ajuta.</p>
+                    <a href="#contact" class="cta-button">Contactează-mă acum</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contactați-mă pentru o consultație</h2>
+                <p class="section-description">Sunt disponibil pentru consultații și întrebări legate de problemele dumneavoastră juridice. Nu ezitați să mă contactați.</p>
+                <div class="contact-content fade-in">
+                    <div class="contact-info">
+                        <h3 style="color: var(--primary-navy); margin-bottom: 1.5rem;">Informații de contact</h3>
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <span>john@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Telefon:</strong>
+                            <span>1234567890</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--primary-navy); margin-bottom: 1.5rem;">Servicii oferite</h3>
+                        <ul class="additional-info">
+                            <li>Consultații cu programare</li>
+                            <li>Disponibilitate pentru urgențe</li>
+                            <li>Răspuns rapid la mesaje</li>
+                            <li>Confidențialitate garantată</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Popescu Marian - Avocat de drept penal. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add visible class to elements already in view
+        window.addEventListener('load', function() {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
